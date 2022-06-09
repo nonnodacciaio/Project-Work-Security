@@ -1,0 +1,93 @@
+drop database if exists IncredibleStyle;
+create database IncredibleStyle;
+use IncredibleStyle;
+
+drop table if exists categorie;
+create table categorie(
+id int primary key auto_increment,
+tipo varchar(100)
+);
+
+
+-- Vestiti
+-- T-shirt 
+-- Top 
+-- Camicie
+-- Jeans
+-- Pantaloni
+-- Gonne
+-- Giacche
+-- Cappotti
+-- Intimo
+-- Calze
+insert into categorie (tipo) values('T-shirt');
+insert into categorie (tipo) values('Top');
+insert into categorie (tipo) values('Camicie');
+insert into categorie (tipo) values('Jeans');
+insert into categorie (tipo) values('Pantaloni');
+insert into categorie (tipo) values('Gonne');
+insert into categorie (tipo) values('Giacche');
+insert into categorie (tipo) values('Cappotti');
+insert into categorie (tipo) values('Intimo');
+insert into categorie (tipo) values('Calze');
+
+
+drop table if exists articoli;
+create table articoli(
+codiceArticolo int primary key auto_increment,
+nome varchar(100),
+foto varchar(100),
+prezzo double,
+colore varchar(100),
+taglia varchar(10),
+quantita int,
+sesso varchar(1),
+id_categoria int,
+foreign key (id_categoria) references categorie(id) on delete cascade
+);
+
+
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova', 'Prova', 0.0, 'Prova','Prova', 0,'F', 1);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova2', 'Prova2', 0.0, 'Prova2','Prova2', 0,'M', 2);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova3', 'Prova3', 0.0, 'Prova3','Prova3', 0,'F', 3);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova4', 'Prova4', 0.0, 'Prova4','Prova4', 0,'M', 4);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova5', 'Prova5', 0.0, 'Prova5','Prova5', 0,'F', 5);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova6', 'Prova6', 0.0, 'Prova6','Prova6', 0,'M', 6);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova7', 'Prova7', 0.0, 'Prova7','Prova7', 0,'F', 7);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova8', 'Prova8', 0.0, 'Prova8','Prova8', 0,'M', 8);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova9', 'Prova9', 0.0, 'Prova9','Prova9', 0,'F', 9);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova10', 'Prova10', 0.0, 'Prova10','Prova10', 0,'M', 10);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova11', 'Prova11', 0.0, 'Prova11','Prova11', 0,'F', 1);
+insert into articoli (nome, foto, prezzo, colore, taglia, quantita, sesso, id_categoria ) values('Prova12', 'Prova12', 0.0, 'Prova12','Prova12', 0,'M', 2);
+
+select * from articoli;
+select * from categorie;
+select * from articoli inner join categorie on categorie.id=articoli.id_categoria;
+
+
+drop table if exists users;
+create table users(
+    id int primary key auto_increment,
+    username varchar(20),
+    password varchar(20)
+);
+
+insert into users(username, password) values('Mario Rossi', '1234');
+
+drop table if exists livelli;
+create table livelli(
+id int primary key auto_increment,
+livello int,
+id_user int unique,
+foreign key (id_user) references users(id)
+);
+
+insert into livelli(livello, id_user) values (1, 1);
+
+
+select * from users;
+select * from livelli;
+
+
+
+

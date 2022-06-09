@@ -1,0 +1,49 @@
+# Giorno 1
+
+- Analisi richiesta del cliente, primo incontro per definire la consegna
+- [Definizione degli strumenti da usare](https://www.notion.so/Stack-8021c45097264840a6253d378949959d)
+- Installazione Git, creazione account GitHub e integrazione con VS Code
+- Definizione struttura progetto (cartelle, packages, dipendenze, classi di base) Spring/Rest
+- Creazione database, creazione classi modello, struttura HTML del gestionale
+- Formazione professionale per frontend
+- Finito abbozzo backend
+- Frontend: impostazione pagina/menu hamburger/menu tendina
+
+# Giorno 2
+
+-- Cose da fare
+
+Backend:
+
+- Login
+
+Due tabelle:
+
+1. int Id, varchar nome utente, varchar password, int livello di accesso FK. Per ora ci sarà un solo record (Admin, Admin livello di accesso 1)
+2. Livelli di accesso (per ora ne basta uno) int
+- Test con Postman
+- Ricerca e sviluppo immagini (da chiedere a Mattia)
+
+Frontend:
+
+- Connessione al database funzionante
+- Metodi CRUD funzionanti con chiamate GET/POST/DELETE/PUT
+- Gestionale funzionante
+-decisione palette colori
+
+1. Alessandra-->acquisisce nozioni js per poi provarlo a fare
+2. Silvia--->html
+3. Sandra-->css
+
+-- Cose fatte
+Frontend: si è scelta la palette dei colori, si è riuscita fare la connessione al database ed è funzionante, 
+Alessandra ha fatto un ripasso dei crud ed è riuscita a fare i metodi CRUD di get e Post
+Silvia ha creato le tabelle su html imparando a crearle senza usare table e usando i modali
+Sandra ha inserito all'interno del css diversi tipi di style degli inserimenti di html e dei modali
+
+Backend: Spring Security con varie prove per l’implementazione
+si è cercato di implementare un metodo di login che riuscisse a loggare admin e i vari users 
+per il nostro sito web. Con la tecnologia Spring Security siamo riusciti a ampliare il codice e 
+a far in modo che funzionasse tutto alla perfezione.
+Ci siamo occupati inoltre di fare tutti gli eventuali controlli e test con Postman, superandoli uno 
+ad uno correttamente. 

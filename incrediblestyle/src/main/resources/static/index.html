@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--IMPORT FONT-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <!--FINE IMPORT FONT-->
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="mainGestionale.js"></script>
+    <link rel="stylesheet" href="styleGestionale.css">
+    <title>Gestionale</title>
+</head>
+
+<body>
+    <h1 class="titolo">Gestionale Incredible Style</h1>
+    <br>
+    <input type="button" class="btn" value="AGGIUNGI PRODOTTO" id="btn-aggiungi">
+    <input type="button" class="btn" value="AGGIUNGI CATEGORIA" id="btn-aggiungi-categoria"><br><br>
+    <label for="filtro">Filtra per categoria: </label>
+    <select name="filtro">
+        <option value="1">TEST</option>
+    </select><br><br>
+    <label for="cerca">Cerca per nome: </label>
+    <input type="text" name="cerca" id="cerca">
+    <input type="button" value="CERCA" class="btn">
+    <!--MODALE-->
+    <div class="modale" id="modale-prodotto">
+        <h3 class="sottotitolo">Aggiungi prodotto</h3>
+        <input type="text" placeholder="Nome..." id="nome"><br><br>
+        <input type="text" placeholder="Foto..." id="foto"><br><br>
+        <input type="number" min="0" step="0.01" placeholder="Prezzo..." id="prezzo"><br><br>
+        <label for="color">Colore:</label>
+        <input type="color" name="color" id="color"><br><br>
+        <label for="taglia">Taglia: </label>
+        <select name="taglia" id="taglia">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+        </select><br><br>
+        <input type="number" placeholder="Quantità..." min="0" id="quantita"><br><br>
+        <label for="sesso">Sesso:</label>
+        <select name="sesso" id="sesso">
+            <option value="">M</option>
+            <option value="">F</option>
+        </select><br><br>
+        <label for="categorie">Categoria: </label>
+        <select name="categorie" id="categorie">
+
+        </select><br><br>
+        <input type="button" class="btn" value="AGGIUNGI" id="btn-aggiungi-modale">
+        <input type="button" class="btn" value="CHIUDI" id="btn-chiudi-modale">
+    </div>
+    <!--FINE MODALE-->
+    <br><br>
+    <h3 class="sottotitolo">Articoli</h3>
+    <div class="tabella articoli" id="tabella-articoli">
+        <div class="intestazione">
+            <div class="celle-intestazione">CODICE PRODOTTO</div>
+            <div class="celle-intestazione">NOME</div>
+            <div class="celle-intestazione">FOTO</div>
+            <div class="celle-intestazione">PREZZO</div>
+            <div class="celle-intestazione">COLORE</div>
+            <div class="celle-intestazione">TAGLIA</div>
+            <div class="celle-intestazione">QUANTITÀ</div>
+            <div class="celle-intestazione">SESSO</div>
+            <div class="celle-intestazione">CATEGORIA</div>
+            <div class="celle-intestazione"></div>
+            <div class="celle-intestazione"></div>
+        </div>
+        <!--RENDER PRODOTTI-->
+    </div>
+    <br><br>
+    <!--MODALE CATEGORIA-->
+    <div class="modale" id="modale-categoria">
+        <h3 class="sottotitolo">Aggiungi categoria</h3>
+        <input type="text" placeholder="Tipo.."><br><br>
+        <input type="button" class="btn" value="AGGIUNGI" id="btn-aggiungi-modale-categoria">
+        <input type="button" class="btn" value="CHIUDI" id="btn-chiudi-modale-categoria">
+    </div>
+    <!--FINE MODALE CATEGORIA-->
+    <br><br>
+    <h3 class="sottotitolo">Categorie</h3>
+    <div class="tabella categorie" id="tabella-categoria">
+        <div class="intestazione">
+            <div class="celle-intestazione"> CODICE PRODOTTO </div>
+            <div class="celle-intestazione"> TIPO </div>
+            <div class="celle-intestazione"></div>
+            <div class="celle-intestazione"></div>
+        </div>
+    </div>
+</body>
+
+</html>

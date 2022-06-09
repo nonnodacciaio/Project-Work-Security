@@ -1,0 +1,109 @@
+:root {
+  --color-greensheen: #81b29a;
+  --color-lavender: #f7edf0;
+  --color-scuro: #ddd3d6;
+  --color-lava: #c81d25;
+  --color-tealblue: #077187;
+}
+
+.titolo {
+  color: var(--color-greensheen);
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.sottotitolo {
+  color: var(--color-greensheen);
+  font-size: 1.25em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  background-color: var(--color-lavender);
+  font-family: "PT Sans", sans-serif;
+}
+
+/*Prima elimino tutto lo stile di default dei pulsanti e poi aggiungo quello che ho scelto io*/
+.btn {
+  display: inline;
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  background-color: var(--color-tealblue);
+  padding: 5px 10px;
+  color: white;
+  font-family: "PT Sans", sans-serif;
+}
+
+/*Quando metto il mouse sopra lo sfondo dei bottoni si scurisce*/
+.btn:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+}
+
+.tabella {
+  display: table;
+  margin: auto;
+}
+
+.articoli {
+  min-width: 75%;
+}
+
+.categorie {
+  min-width: 50%;
+}
+
+.intestazione {
+  display: table-row;
+  line-height: 3em;
+}
+
+.riga {
+  display: table-row;
+  line-height: 2em;
+}
+
+/*Le righe pari avranno il colore lavender*/
+.riga:nth-child(even) {
+  background-color: var(--color-lavender);
+}
+
+/*Le righe dispari avranno il colore lavender, ma più scuro*/
+.riga:nth-child(odd) {
+  background-color: var(--color-scuro);
+}
+
+.celle-intestazione {
+  display: table-cell;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+
+.cella {
+  display: table-cell;
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+
+.modale {
+  display: none; /* Hidden by default */
+  position: absolute;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-style: solid;
+  border-color: var(--color-verdescuro);
+  border-width: 3px;
+  padding: 20px;
+  overflow: auto;
+  background-color: var(--color-lavender);
+}
