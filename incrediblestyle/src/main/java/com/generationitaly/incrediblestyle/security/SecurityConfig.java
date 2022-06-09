@@ -40,8 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 // tutti possono accedere a questi percorsi
                 .antMatchers("/home.html").hasAnyRole(Roles.ADMIN, Roles.USER)
-                // .antMatchers("/account.html").hasAnyRole(Roles.ADMIN, Roles.USER)
-                // .antMatchers("/accountmanager/**").hasAnyRole(Roles.ADMIN) // solo gli admin
+                .antMatchers("/account.html").hasAnyRole(Roles.ADMIN, Roles.USER)
+                .antMatchers("/accountmanager/**").hasAnyRole(Roles.ADMIN) // solo gli admin
                 // accedono a /management/**
                 .anyRequest().authenticated() // tutte le (altre) richieste richiedono authenticazione
                 .and()
